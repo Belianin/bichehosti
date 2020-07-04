@@ -1,0 +1,74 @@
+a {
+    text-decoration: none;
+    color: #c0b283;
+}
+
+a:hover {
+    color: #dcd0c0
+}
+
+body {
+    font-family: 'Consolas', 'Lucida Console', 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    text-align: center;
+    cursor: default;
+}
+
+.glossary {
+    color: black;
+    padding: 64px 0 64px 0;
+}
+
+.term-section {
+    display: block;
+    padding: 16px 0 16px 0;
+    text-align: left;
+}
+
+.history {
+    padding: 8px 0 8px 0;
+    color: #696969;
+}
+
+.history:hover {
+    color: #373737;
+}
+
+.quote {
+    font-family: "Consolas", "Lucida Console", "monospace";
+    text-align: right;
+    color: dodgerblue;
+    text-shadow: 1px 1px 1px darkblue;
+}
+
+.centered {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.small {
+    width: 300px;
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.emote {
+    color: purple;
+}
+
+.menu-link {
+    display: inline-block;
+    color: gold;
+    font-size: 24px;
+    margin: 0 32px 0 32px;
+}
+
+.menu-container {
+}

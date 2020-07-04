@@ -1,0 +1,107 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: dodgerblue
+}
+
+body {
+    font-family: 'Consolas', 'Lucida Console', 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: black;
+    text-align: center;
+    cursor: default;
+}
+
+.glossary {
+    color: whitesmoke;
+    padding: 64px 0 64px 0;
+}
+
+.term-section {
+    display: block;
+    padding: 16px 0 16px 0;
+    text-align: left;
+}
+
+.history {
+    padding: 8px 0 8px 0;
+    color: #4c4c4c
+}
+
+.history:hover {
+    color: lime;
+}
+
+.quote {
+    font-family: "Consolas", "Lucida Console", "monospace";
+    text-align: right;
+    color: goldenrod;
+}
+
+.goldenrod {
+    color: goldenrod;
+}
+
+.red {
+    color: red;
+}
+
+.gray {
+    color: gray;
+}
+
+.centered {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.small {
+    width: 300px;
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.emote {
+    color: purple;
+}
+
+.menu-link {
+    display: inline-block;
+    color: gold;
+    font-size: 24px;
+    margin: 0 32px 0 32px;
+}
+
+.menu-container {
+    margin-bottom: 24px;
+}
+
+.smile {
+    display: inline;
+    width: auto;
+    height: 1em;
+}
+
+.background-image {
+    width: 100vw;
+    height: auto;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+}
+
+.spoiler {
+    display: inline;
+}
+
+.spoiler summary {
+    color: dodgerblue
+}

@@ -1,0 +1,485 @@
+{
+  "rounds":[
+    {
+      "themes":[
+        {
+          "title":"Знаменитые шедервы",
+          "description": "Нужно сказать название смайла",
+          "questions":[
+            {
+              "score":100,
+              "question":"<img class=\"smile\" src=\"./data/smiles/alohabamboe.png\" alt=\":alohabamboe:\">",
+              "answer":"alohabamboe",
+              "solved": true
+            },
+            {
+              "score":200,
+              "question":"<img class=\"smile\" src=\"./data/smiles/igorbamboe2.png\" alt=\":igorbamboe2:\">",
+              "answer":"igorbamboe2",
+              "solved": true
+            },
+            {
+              "score":300,
+              "question":"<img class=\"smile\" src=\"./data/smiles/ohrenelbamboe.png\" alt=\":ohrenelbamboe:\">",
+              "answer":"ohrenelbamboe",
+              "solved": true
+            },
+            {
+              "score":300,
+              "question":"<img class=\"smile\" src=\"./data/smiles/fbamboe.png\" alt=\":fbamboe:\">",
+              "answer":"fbamboe",
+              "solved": false
+            },
+            {
+              "score":500,
+              "question":"<img class=\"smile\" src=\"./data/smiles/badoobamboe.png\" alt=\":badoobamboe:\">",
+              "answer":"badoobamboe",
+              "solved": true
+            }
+          ]
+        },
+        {
+          "title":"Русская народная 2",
+          "description": "Вопросы про Доту 2",
+          "questions":[
+            {
+              "score":100,
+              "question":"Из-за кого мы не поехали на Интернешенал",
+              "answer":"Квир",
+              "solved": true
+            },
+            {
+              "score":200,
+              "question":"Любимый билд Несса",
+              "answer":"Тяж",
+              "solved": false
+            },
+            {
+              "score":300,
+              "question":"Чего нельзя сделать в Кастом Хиро?",
+              "answer":"Проиграть",
+              "solved": false
+            },
+            {
+              "score":400,
+              "question":"Ты можешь быть и физиком и магом. Главное не быть ****",
+              "answer":"Дебилом",
+              "solved": false
+            },
+            {
+              "score":500,
+              "question":"Единственный Бичехост, с которым у Алера винрейт больше 50%",
+              "answer":"Fanta <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/winrate.jpg\" alt=\"winrate\"></details>",
+              "solved": true
+            }
+          ]
+        },
+        {
+          "title":"Математика",
+          "description": "На подумать",
+          "questions":[
+            {
+              "score":100,
+              "question":"Цена трёх картошек фри",
+              "answer":"11 рублей",
+              "solved": true
+            },
+            {
+              "score":200,
+              "question":"У большинства Бичехостов ники стостоят из 4 или 5 букв. А у кого ник состоит из 6 букв?",
+              "answer":"Муми Ти",
+              "solved": false
+            },
+            {
+              "score":300,
+              "question":"Исторический максимум цены бичекоина",
+              "answer":"0",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Суммарный возраст Хоста, Алера, Квира и Паши (30.04.2020)",
+              "answer":"23+22+28+16=89",
+              "solved": false
+            },
+            {
+              "score":500,
+              "question":"Квир, у тебя меньше, а у меня больше. (У Хоста вообще нет)",
+              "answer":"ПРИБАФКА К ПЕНСИИ)))",
+              "solved": false
+            }
+          ]
+        },
+        {
+          "title":"Бичиные технологии",
+          "description": "Вопросы о Бичесайте и Бичеботе",
+          "questions":[
+            {
+              "score":100,
+              "question":"На какой странице Бичесайта есть светлая тема?",
+              "answer":"Глоссарий",
+              "solved": true
+            },
+            {
+              "score":200,
+              "question":"В какое время умирает бичебот?",
+              "answer":"после 25 числа до конца месяца",
+              "solved": true
+            },
+            {
+              "score":300,
+              "question":"С какого раза начал отображаться смайл :mujikbamboe: в музее?",
+              "answer":"С третьего",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Первое что умел Бичебот",
+              "answer":"Хм, \"@username\" вызывает у тебя :emote:? Понятно...",
+              "solved": true
+            },
+            {
+              "score":500,
+              "question":"Какие команды нужно написать, чтобы посчитать статистику смайлов по реакция и использованиям в сообщениях? ",
+              "answer":"/t4 и /t5",
+              "solved": false
+            }
+          ]
+        },
+        {
+          "title":"Гигантские аниме-роботы",
+          "description": "Вопросы о Supreme Commander",
+          "questions":[
+            {
+              "score":100,
+              "question":"Любимый билд Несса",
+              "answer":"Т3",
+              "solved":true
+            },
+            {
+              "score":200,
+              "question":"Как Алер назовёт свою дочь?",
+              "answer":"Итота",
+              "solved":false
+            },
+            {
+              "score":300,
+              "question":"я молю Тебя о *****,\nо такой наивной, немного детской,\nя молю Тебя, оживи,\nв моем уставшем, погибшем сердце.\n\nя молю Тебя, просто будь,\nбудь рассветом моим в полуночи,\nбудь закатом моим, прошу,\nне оставь меня только мучиться.\n\nО чем молят?",
+              "answer":"Разведка / Скаут",
+              "solved":true
+            },
+            {
+              "score":400,
+              "question":"Рейтинг лучших игроков в FAF",
+              "answer":"сексибамбуу ТЫЩА, квазилигенд  ММ 900, ААААА гипербодя 800 рейтинга",
+              "solved":false
+            },
+            {
+              "score":500,
+              "question":"Расследование Навального о секретной бане Жириновского",
+              "answer":"Либераха порвал толстяка с воды",
+              "solved":true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "themes":[
+        {
+          "title":"Билдостроение",
+          "description": "Угадать два трейта Бичехоста",
+          "questions":[
+            {
+              "score":200,
+              "question":"Трейты Несса <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/builds1.png\" alt=\"builds\"></details>",
+              "answer":"Добродушие и Крушила",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Трейты Алера <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/builds1.png\" alt=\"builds\"></details>",
+              "answer":"Химик и Импульсивный",
+              "solved": true
+            },
+            {
+              "score":600,
+              "question":"Трейты Квира <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/builds2.png\" alt=\"builds\"></details>",
+              "answer":"Чувствительный к химии и Сопротивлении к химии",
+              "solved": false,
+              "comment": "По сути правильно ответили про метаболизм, но что поделать"
+            },
+            {
+              "score":800,
+              "question":"Трейты Паши <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/builds2.png\" alt=\"builds\"></details>",
+              "answer":"Маленький и Камикадзе",
+              "solved": true
+            },
+            {
+              "score":1000,
+              "question":"Трейты Хоста (БЕЗ КАРТИНКИ!!!)",
+              "answer":"Жидкое тело и \"Одаренный\"",
+              "solved": true
+            }
+          ]
+        },
+        {
+          "title":"Однажды в пустоши",
+          "description": "Вопросы про Фолач",
+          "questions":[
+            {
+              "score":200,
+              "question":"Любимый билд Несса",
+              "answer":"Тяж",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Враг в лесу, друг в пустоши",
+              "answer":"Клещ",
+              "solved": false
+            },
+            {
+              "score":600,
+              "question":"Назовите трех бамбу и мужика",
+              "answer":"SexyBamboe, CrazyBamboe, Мужик",
+              "solved": true
+            },
+            {
+              "score":800,
+              "question":"Сколько бичехостов нужно, чтобы победить начальника охраны? (Квест на ОД)",
+              "answer":"Четыре: 3 лупят по 1 хп и ждут четвертого с крушилой",
+              "solved": true
+            },
+            {
+              "score":1000,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/main_q.jpg\" alt=\"main\"></details>",
+              "answer":"Яблоки на мейне <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/main_a.jpg\" alt=\"main\"></details>",
+              "solved": true
+            }
+          ]
+        },
+        {
+          "title":"Вечернее шоу",
+          "description": "Общие вопросы про наши устные мемы",
+          "questions":[
+            {
+              "score":200,
+              "question":"Худшее, что может услышать женщина",
+              "answer":"Я моюсь раз в три дня",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Знакомьтесь, Витяныч 2",
+              "answer":"Федя Климин",
+              "solved": true
+            },
+            {
+              "score":600,
+              "question":"Назовите закон Бичехостов",
+              "answer":"Суммарная сила БИЧЕХОСТОВ не зависит от количества человек в пачке и всегда равна константе. Другими словами - чем больше БИЧЕХОСТОВ, тем меньше их скилл",
+              "solved": true
+            },
+            {
+              "score":800,
+              "question":"Где живет Квир? Где живет Алер? Где жил Хост?",
+              "answer":"ГУ, Гиперхата / ГМО, Фракционка / Бичехата",
+              "solved": true
+            },
+            {
+              "score":1000,
+              "question":"Сколько существует смайлов с Квиром?",
+              "answer":"12 <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/qwear.jpg\" alt=\"qwear\"></details>",
+              "solved": false
+            }
+          ]
+        },
+        {
+          "title":"Три реакции на границе Дискорда",
+          "description": "Угадать какие три реакции вывели пост в #бичехосты-лучшее",
+          "questions":[
+            {
+              "score":200,
+              "question":"Ну что соберемся сегодня на последний Г-9 ? Ставим :lifer:",
+              "answer":"<img class=\"smile\" src=\"./data/smiles/lifer.png\" alt=\":lifer:\"><img class=\"smile\" src=\"./data/smiles/lifer.png\" alt=\":lifer:\"><img class=\"smile\" src=\"./data/smiles/lifer.png\" alt=\":lifer:\">",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Алер, какое-то отвращение к тебе после  вчерашнего. Всю жизнь в маске дурачка перед нами работягами. Выглядишь очень хитрым, просчитывающим все ходы. Умер тот веселый задрот алер для меня, который бежал за шавухой и чаем нести. Ты все время врал нам, что гречей питаешься. А все ради того чтобы быть ближе к своей аудитории. Давно меня так не обманывали, прощай. \n",
+              "answer":"<img class=\"smile\" src=\"./data/smiles/igorbamboe2.png\" alt=\":igorbamboe2:\"><img class=\"smile\" src=\"./data/smiles/igorbamboe2.png\" alt=\":igorbamboe2:\"><img class=\"smile\" src=\"./data/smiles/igorbamboe2.png\" alt=\":igorbamboe2:\">",
+              "solved": false
+            },
+            {
+              "score":600,
+              "question":"когда чат длиться 5 минут <details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/love.png\" alt=\"love\"></details>",
+              "answer":"<img class=\"smile\" src=\"./data/smiles/roflanbamboe.png\" alt=\":roflanbamboe:\"><img class=\"smile\" src=\"./data/smiles/roflanbamboe.png\" alt=\":roflanbamboe:\"><img class=\"smile\" src=\"./data/smiles/roflanbamboe.png\" alt=\":roflanbamboe:\">",
+              "solved": false
+            },
+            {
+              "score":800,
+              "question":"Ща фракцу откроем и создадим на форуме тему что мы к себе никого не возьмём",
+              "answer":"<img class=\"smile\" src=\"./data/smiles/dobrobamboe.png\" alt=\":dobrobamboe:\"><img class=\"smile\" src=\"./data/smiles/dobrobamboe.png\" alt=\":dobrobamboe:\"><img class=\"smile\" src=\"./data/smiles/dobrobamboe.png\" alt=\":dobrobamboe:\">",
+              "solved": false
+            },
+            {
+              "score":1000,
+              "question":"я топ гамбургеры делал",
+              "answer":"<img class=\"smile\" src=\"./data/smiles/t3.png\" alt=\":t3:\"><img class=\"smile\" src=\"./data/smiles/t3.png\" alt=\":t3:\"><img class=\"smile\" src=\"./data/smiles/t3.png\" alt=\":t3:\">",
+              "solved": false
+            }
+          ]
+        },
+        {
+          "title":"Наши любимые",
+          "description": "Вопросы про женщин",
+          "questions":[
+            {
+              "score":200,
+              "question":"Безотказный подкат",
+              "answer":"Я зарабатываю миллион в секунду, а Солнце скоро погаснет. Гулять?",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Идеальный возраст женщины",
+              "answer":"16",
+              "solved": true
+            },
+            {
+              "score":600,
+              "question":"Первое описание Алера в Тиндере",
+              "answer":"Не пиши мне, если ты не аристократка, запертая в худом теле, или не знаешь, кто такой Сид Барретт",
+              "solved": true
+            },
+            {
+              "score":800,
+              "question":"Лучшее кого мы встречали в Тиндере",
+              "answer":"Друг друга",
+              "solved": true
+            },
+            {
+              "score":1000,
+              "question":"Четыре всадника апокалипсиса",
+              "answer":"Колобкович, Пирожкович, Коробкович, Носович",
+              "solved": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "themes":[
+        {
+          "title":"Лучшее 2",
+          "description": "Угадать автора фразы, которая попала в #бичехосты-лучшее",
+          "questions":[
+            {
+              "score":200,
+              "question":"потому что ты обезъян тысячного ранга",
+              "answer":"Хост",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Мужики я так заряжен порошками что щас ультану!",
+              "answer":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/ult.jpg\" alt=\"ult\"></details>",
+              "solved": true
+            },
+            {
+              "score":600,
+              "question":"хыхы стриптиз",
+              "answer":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/hihi.jpg\" alt=\"hihi\"></details>",
+              "solved": true
+            },
+            {
+              "score":800,
+              "question":"кратер ДЕРЬМО",
+              "answer":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/krator.jpg\" alt=\"krator\"></details>",
+              "solved": false
+            },
+            {
+              "score":1000,
+              "question":"скоро рипнусь, зашел попрощаться",
+              "answer":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/rip.jpg\" alt=\"rip\"></details>",
+              "solved": false
+            }
+          ]
+        },
+        {
+          "title":"Лучшее",
+          "description": "Угадать автора фразы, которая попала в #бичехосты-лучшее",
+          "questions":[
+            {
+              "score":200,
+              "question":":valera: ну лан",
+              "answer":"Бичебот",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"Мужики зацените мою научную работу про Алеризм\n",
+              "answer":"Хост",
+              "solved": true
+            },
+            {
+              "score":600,
+              "question":"Мужики, а как вам Сенина борода?",
+              "answer":"Алер",
+              "solved": false
+            },
+            {
+              "score":800,
+              "question":"Ставь лайк, если испытываешь чувства к Полине Кузнецовой",
+              "answer":"ValeraUbivator777",
+              "solved": false
+            },
+            {
+              "score":1000,
+              "question":"Мужики, этим летом надо снять фильм, вы только вспомните как хорош был кч. Надо повторить успех уже нашей группировкой",
+              "answer":"ShpionBamboe",
+              "solved": true
+            }
+          ]
+        },
+        {
+          "title":"Общественное мнение",
+          "description": "Угадать что за смайл по его оценкам",
+          "questions":[
+            {
+              "score":200,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/smiles/oldbamboe_coolstory.jpg\"></details>",
+              "answer":"Oldbamboe / Coolstory",
+              "solved": true
+            },
+            {
+              "score":400,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/smiles/nesspride3.jpg\"></details>",
+              "answer":"Nesspride3",
+              "solved": false
+            },
+            {
+              "score":600,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/smiles/quasilegend.jpg\"></details>",
+              "answer":"Quasilegend",
+              "solved": true
+            },
+            {
+              "score":800,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/smiles/imbabamboe.jpg\"></details>",
+              "answer":"Imbabamboe",
+              "solved": false
+            },
+            {
+              "score":1000,
+              "question":"<details class=\"spoiler\"><summary>картинка</summary><img src=\"./data/images/sigame/smiles/lyabamboe.jpg\"></details>",
+              "answer":"Lyabamboe",
+              "solved": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
