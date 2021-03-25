@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta lang="ru">
+    <link rel="stylesheet" href="css/darkhost.css">
+    <link rel="icon" href="../src/icon.png">
+    <title>БИЧЕРОСЫ</title>
+</head>
+<body link="darkslateblue" vlink="darkslateblue">
+<div class="glossary centered">
+    <h1>БИЧЕРОСЫ</h1>
+    <h1 id="question" style="color: red; font-size: 70px; height: 240px;"></h1>
+    <button style="display: inline-block;" onclick="getQuestion()">Новый вопрос!</button>
+    <button id="rulesButton" style="display: inline-block;" onclick="changeRules()">Без повторений</button>
+    <div id="playedLabel"></div>
+    <button id="modeButton" style="display: inline-block;" onclick="changeMode()">Режим рулетки</button>
+    <div id="chancesLable"></div>
+    <script>
+        let withoutUsed = false;
+        let isRoulete = false;
+        let mediumChange = 0;
+        let hardChange = 0;
+
+        function resetChances(){
+            mediumChange = 0;
+            hardChange = 0;
+        }
+
+        function changeRules(){
+            withoutUsed = !withoutUsed;  
+            
+            document.getElementById('rulesButton').innerHTML = withoutUsed ? 'C повторениями' : 'Без повторений'
+        }
+
+
+        function changeMode(){
+            isRoulete = !isRoulete;
+            if (!isRoulete)
+                resetChances();
+
+            document.getElementById('modeButton').innerHTML = isRoulete ? 'Обычный режим' : 'Режим рулетки'
+        }
+
+        let played = new Set();
+
+        function selectQuestion(){
+            if (isRoulete){
+                let roll = Math.floor(Math.random() * 100);
+                let q = [];
+
+                let h = withoutUsed ? hardQuestions.filter(q => !played.has(q)) : hardQuestions;
+                let m = withoutUsed ? mediumQuestions.filter(q => !played.has(q)) : mediumQuestions;
+                let e = withoutUsed ? easyQuestions.filter(q => !played.has(q)) : easyQuestions;
+
+                let chancesLabel = document.getElementById('chancesLable');
+                if (roll < hardChange && h.length > 0) {
+                    q = h
+                    resetChances();
+                    chancesLabel.innerHTML = "Сложный вопрос!"
+                } else if (roll < mediumChange && m.length > 0) {
+                    q = m
+                    resetChances();
+                    chancesLabel.innerHTML = "Средний вопрос!"
+                } else if (e.length > 0) {
+                    q = e;
+                    hardChange += 5;
+                    mediumChange += 10;
+                    chancesLabel.innerHTML = `Шанс на средний ${mediumChange}%, шанс на тяжелый ${hardChange}%`
+                } else {
+                    return "Вопросы кончились!"
+                };
+
+                return q[Math.floor(Math.random() * q.length)];
+            } else {
+                let allQuestions = hardQuestions.concat(mediumQuestions).concat(easyQuestions);
+                if (withoutUsed)
+                    allQuestions = allQuestions.filter(q => !played.has(q));
+                    
+                if (allQuestions.length === 0)
+                    return "Вопросы кончились!";
+
+                return allQuestions[Math.floor(Math.random() * allQuestions.length)];
+            }
+        }
+
+        function getQuestion(){
+            let selectedQuestion = selectQuestion();
+         
+            if (withoutUsed)
+                played.add(selectQuestion);
+
+            document.getElementById('playedLabel').innerHTML = withoutUsed ? `Использовано ${played.keys.length} вопросов` : ''
+
+            document.getElementById('question').innerHTML = selectedQuestion;
+        }
+
+        let easyQuestions = [
+            'Окрошка на квасе или кефире?',
+            'Чей крым?',
+            'Несс токсичный?',
+            'Крипта скам или нет?'
+        ];
+
+        let mediumQuestions = [
+            'Сколько лет один?',
+            'Чем блевал когда сильно переел?',
+            'Хотел бы себе пластическую операцию? Какую?',
+            'За кого проголосуешь за Путина или Навального?',
+            'Бросил бы снежок в омоновца?'
+        ];
+
+        let hardQuestions = [
+            'Ходил в туалет в школе?',
+            'Моргенштерн или Слава Мэрлоу?',
+            'Рэп кал?'
+        ]
+    </script>
+
+</div>
+</body>
+</html>
