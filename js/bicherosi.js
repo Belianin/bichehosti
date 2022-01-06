@@ -158,6 +158,19 @@ document.getElementById("listSelect").addEventListener("change", async v => {
 
 document.getElementById("hard-questions-checkbox").addEventListener("change", () => hardEnabled = !hardEnabled)
 
+document.getElementById("apply-hard-chance-button").addEventListener("click", x => {
+    let element = document.getElementById("hard-change-input");
+
+    const intValue = parseInt(element.value);
+    x.target.value = '';
+    if (isNaN(intValue))
+        return;
+
+    hardChangeStep = intValue > 100 ? 100 : intValue;
+
+    document.getElementById("current-hard-chance").innerText = hardChangeStep;
+})
+
 document.getElementById("hard-change-input").addEventListener("keypress", x => {
     if (x.key !== 'Enter')
         return;
