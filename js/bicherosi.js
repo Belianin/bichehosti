@@ -5,12 +5,20 @@ let currentList = "";
 
 let cachedLists = {};
 
+let hardChangeStep = 33;
+let hardChange = 0;
+let played = new Set();
+let hardEnabled = true;
+
 async function main() {
     await getLists();
     await getList();
     document.getElementById("listSelect").disabled = false;
     document.getElementById("new-question-button").disabled = false;
+
+    document.getElementById("current-hard-chance").innerText = hardChangeStep;
 }
+
 
 main();
 
@@ -89,12 +97,10 @@ async function getList() {
 
     easyQuestions = cachedLists[currentList].easyQuestions;
     hardQuestions = cachedLists[currentList].hardQuestions;
+    document.getElementById('question').innerText = '';
     played = new Set();
     hardChange = 0;
 }
-
-let hardChange = 0;
-let played = new Set();
 
 function selectQuestion(){
     let roll = Math.floor(Math.random() * 100);
@@ -104,20 +110,29 @@ function selectQuestion(){
     let e = easyQuestions.filter(q => !played.has(q));
 
     let chancesLabel = document.getElementById('chancesLable');
-    if (roll < hardChange && h.length > 0) {
-        q = h
-        hardChange = 0;
-        chancesLabel.innerHTML = "Сложный вопрос!"
-    } else if (e.length > 0) {
-        q = e;
-        hardChange += 33;
-        chancesLabel.innerHTML = `Шанс на сложный вопрос ${hardChange}%`
-    } else if (h.length > 0) {
-        q = h
-        hardChange = 0;
-        chancesLabel.innerHTML = "Сложный вопрос!"
-    } else {
-        return "Вопросы кончились!"
+    if (hardEnabled) {
+        if (roll < hardChange && h.length > 0) {
+            q = h
+            hardChange = 0;
+            chancesLabel.innerHTML = "Сложный вопрос!"
+        } else if (e.length > 0) {
+            q = e;
+            hardChange += hardChangeStep;
+            chancesLabel.innerHTML = `Шанс на сложный вопрос ${hardChange}%`
+        } else if (h.length > 0) {
+            q = h
+            hardChange = 0;
+            chancesLabel.innerHTML = "Сложный вопрос!"
+        } else {
+            return "Вопросы кончились!"
+        }
+    }
+    else {
+        if (e.length > 0) {
+            q = e;
+        } else {
+            return "Вопросы кончились!"
+        }
     }
 
     return q[Math.floor(Math.random() * q.length)];
@@ -130,7 +145,7 @@ function getQuestion(){
 
     document.getElementById('playedLabel').innerHTML = `Использовано ${played.size}/${easyQuestions.length + hardQuestions.length} вопросов`;
 
-    document.getElementById('question').innerHTML = selectedQuestion;
+    document.getElementById('question').innerText = selectedQuestion;
 }
 
 
@@ -140,3 +155,19 @@ document.getElementById("listSelect").addEventListener("change", async v => {
     currentList = v.target.value;
     await getList();
 });
+
+document.getElementById("hard-questions-checkbox").addEventListener("change", () => hardEnabled = !hardEnabled)
+
+document.getElementById("hard-change-input").addEventListener("keypress", x => {
+    if (x.key !== 'Enter')
+        return;
+
+    const intValue = parseInt(x.target.value);
+    x.target.value = '';
+    if (isNaN(intValue))
+        return;
+
+    hardChangeStep = intValue > 100 ? 100 : intValue;
+
+    document.getElementById("current-hard-chance").innerText = hardChangeStep;
+})

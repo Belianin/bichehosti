@@ -11,11 +11,19 @@
 <body link="darkslateblue" vlink="darkslateblue">
 <div class="glossary centered">
     <h1>БИЧЕПРОСЫ</h1>
-    <h1 id="question" style="color: red; font-size: 70px; height: 360px;"></h1>
-    <button style="display: inline-block; width: 500px; height: 300px; font-size: 76px" id="new-question-button" disabled>Новый вопрос!</button>
-    <div id="playedLabel"></div>
-    <div id="chancesLable"></div>
-    <select id="listSelect" style="display: inline-block;font-size: 48px" disabled></select>
+    <h1 id="question" style="color: red; font-size: 70px; height: 360px"></h1>
+    <div style="border: double; padding: 8px">
+        <button style="display: inline-block; width: 500px; height: 300px; font-size: 76px" id="new-question-button" disabled>Новый вопрос!</button>
+        <div id="playedLabel"></div>
+        <div id="chancesLable"></div>
+        <select id="listSelect" style="display: inline-block;font-size: 48px" disabled></select>
+        <p>
+            Задать шанс на сложный вопрос <input id="hard-change-input"/> = <span id="current-hard-chance"></span>%
+        </p>
+        <p>
+            Сложные вопросы <input type="checkbox" id="hard-questions-checkbox" checked>
+        </p>
+    </div>
 </div>
 </body>
 </html>
