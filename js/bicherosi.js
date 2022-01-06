@@ -1,8 +1,9 @@
-
 const apiUrl = 'https://script.google.com/macros/s/AKfycbxGgs8UwpqKMoqHiHqkuYCeC1QbfpwpPJSzRtcfR8IJxJYNv401Ntsj7F4dT-BPF4Svow/exec';
 
 let lists = [];
 let currentList = "";
+
+let cachedLists = {};
 
 async function main() {
     await getLists();
@@ -48,39 +49,48 @@ async function getLists() {
 }
 
 async function getList() {
+    if (!cachedLists[currentList]) {
+        document.getElementById("listSelect").disabled = true;
+        document.getElementById("new-question-button").disabled = true;
 
-    document.getElementById("listSelect").disabled = true;
-    document.getElementById("new-question-button").disabled = true;
+        let response = await fetch(`${apiUrl}?method=getList&listName=${currentList}`)
+            .then(x => {
+                if (x.ok)
+                    return x.json();
 
-    let response = await fetch(`${apiUrl}?method=getList&listName=${currentList}`)
-        .then(x => {
-            if (x.ok)
-                return x.json();
+                console.error(x);
 
-            console.error(x);
+                return {};
+            })
+            .then(x => {
+                if (x.isSuccess) {
+                    return x.data;
+                }
 
-            return {};
-        })
-        .then(x => {
-            if (x.isSuccess) {
-                return x.data;
-            }
+                console.log(x.errorMessage);
+                return {
+                    easyQuestions: [],
+                    hardQuestions: []
+                }
+            });
 
-            console.log(x.errorMessage);
-            return {
-                easyQuestions: [],
-                hardQuestions: []
-            }
-        });
 
-    console.log(`Got list ${currentList}: ${response.easyQuestions.length}:${response.hardQuestions.length}`);
+        console.log(`Got list ${currentList}: ${response.easyQuestions.length}:${response.hardQuestions.length}`);
 
-    easyQuestions = response.easyQuestions;
-    hardQuestions = response.hardQuestions;
+        cachedLists[currentList] = response;
+
+        document.getElementById("listSelect").disabled = false;
+        document.getElementById("new-question-button").disabled = false;
+    }
+
+
+    document.getElementById('playedLabel').innerText = "Использовано 0 вопросов"
+    document.getElementById('chancesLable').innerText = "Поехали!";
+
+    easyQuestions = cachedLists[currentList].easyQuestions;
+    hardQuestions = cachedLists[currentList].hardQuestions;
     played = new Set();
-
-    document.getElementById("listSelect").disabled = false;
-    document.getElementById("new-question-button").disabled = false;
+    hardChange = 0;
 }
 
 let hardChange = 0;
